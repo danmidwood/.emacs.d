@@ -9,3 +9,4 @@ tramp
 
 # elpa packages
 /elpa/
+/transient/

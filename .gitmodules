@@ -1,0 +1,3 @@
+[submodule "crafted-emacs"]
+	path = crafted-emacs
+	url = git@github.com:SystemCrafters/crafted-emacs.git

@@ -1,4 +1,4 @@
-;;; init.el --- The entry point for my emacs config  -*- lexical-binding: t; -*-
+;;; daniel-clojure-package.el --- Packages for Clojure development  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2024  Daniel Midwood
 
@@ -21,28 +21,15 @@
 
 ;;; Code:
 
-(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
-(when (and custom-file
-           (file-exists-p custom-file))
-  (load custom-file nil :nomessage))
+(require 'daniel-lisp-package)
 
-(load (expand-file-name
-       "crafted-emacs/modules/crafted-init-config"
-       user-emacs-directory))
+(add-to-list 'package-selected-packages 'cider)
+(add-to-list 'package-selected-packages 'clj-refactor)
+(add-to-list 'package-selected-packages 'clojure-mode)
+(add-to-list 'package-selected-packages 'flycheck-clojure)
 
-(require 'crafted-osx-config)
 
-(require 'daniel-theme-package)
-(require 'daniel-development-package)
-(require 'daniel-elisp-package)
-(require 'daniel-clojure-package)
 
-(package-install-selected-packages :noconfirm)
 
-(require 'daniel-theme-config)
-(require 'daniel-development-config)
-(require 'daniel-elisp-config)
-(require 'daniel-clojure-config)
-
-(provide 'init)
-;;; init.el ends here
+(provide 'daniel-clojure-package)
+;;; daniel-clojure-package.el ends here

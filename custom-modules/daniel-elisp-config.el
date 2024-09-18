@@ -1,4 +1,4 @@
-;;; init.el --- The entry point for my emacs config  -*- lexical-binding: t; -*-
+;;; daniel-elisp-config.el --- Elisp config  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2024  Daniel Midwood
 
@@ -21,28 +21,13 @@
 
 ;;; Code:
 
-(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
-(when (and custom-file
-           (file-exists-p custom-file))
-  (load custom-file nil :nomessage))
 
-(load (expand-file-name
-       "crafted-emacs/modules/crafted-init-config"
-       user-emacs-directory))
+(require 'eldoc)
+(require 'daniel-lisp-config)
 
-(require 'crafted-osx-config)
+(add-hook 'emacs-lisp-mode-hook #'package-lint-flymake-setup)
+(add-hook 'emacs-lisp-mode-hook #'daniel-lisp-hook)
 
-(require 'daniel-theme-package)
-(require 'daniel-development-package)
-(require 'daniel-elisp-package)
-(require 'daniel-clojure-package)
+(provide 'daniel-elisp-config)
+;;; daniel-elisp-config.el ends here
 
-(package-install-selected-packages :noconfirm)
-
-(require 'daniel-theme-config)
-(require 'daniel-development-config)
-(require 'daniel-elisp-config)
-(require 'daniel-clojure-config)
-
-(provide 'init)
-;;; init.el ends here
