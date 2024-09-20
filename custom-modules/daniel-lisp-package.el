@@ -1,4 +1,4 @@
-;;; daniel-lisp-package.el --- Packages for shared lisp programming  -*- lexical-binding: t; -*-
+;;; daniel-lisp-package.el --- Shared lisp programming  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2024  Daniel Midwood
 
@@ -16,6 +16,8 @@
 
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+;;; Commentary:
 
 ;;; Code:
 

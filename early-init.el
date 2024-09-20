@@ -23,11 +23,19 @@
 
 (load "~/.emacs.d/crafted-emacs/modules/crafted-early-init-config")
 
+
+;; Hide extra noise around this screen.
 (setq inhibit-startup-screen t)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (menu-bar-mode -1)
 
+;; Prefer visual over noisy bell.
+(setq visible-bell t)
+
+;; Show the column number in the modeline.
+(column-number-mode)
+;; And line numbers down the side in each buffer.
 (global-display-line-numbers-mode)
 
 (provide 'early-init)

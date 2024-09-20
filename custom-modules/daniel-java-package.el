@@ -1,8 +1,8 @@
-;;; daniel-lisp-config.el --- Shared Lisp config  -*- lexical-binding: t; -*-
+;;; daniel-java-package.el --- Java Packages         -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2024  Daniel Midwood
 
-;; Author: Daniel Midwood
+;; Author: Daniel Midwood <danielmidwood@Daniels-MacBook-Pro.local>
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -19,15 +19,11 @@
 
 ;;; Commentary:
 
+;;
+
 ;;; Code:
-(require 'paredit)
-(require 'rainbow-delimiters)
 
-(defun daniel-lisp-hook ()
-  "Enable parens modes for nicer editing."
-  (enable-paredit-mode)
-  (rainbow-delimiters-mode 1)
-  (show-paren-mode 1))
+(add-to-list 'package-selected-packages 'lsp-java)
 
-(provide 'daniel-lisp-config)
-;;; daniel-lisp-config.el ends here
+(provide 'daniel-java-package)
+;;; daniel-java-package.el ends here

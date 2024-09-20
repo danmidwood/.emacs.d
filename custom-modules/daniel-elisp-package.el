@@ -23,8 +23,9 @@
 
 (require 'daniel-lisp-package)
 
-(add-to-list 'package-selected-packages 'package-lint)
-(add-to-list 'package-selected-packages 'package-lint-flymake)
+(add-to-list 'package-selected-packages 'flycheck)
+(add-to-list 'package-selected-packages 'whichkey)
+;; (add-to-list 'package-selected-packages 'package-lint-flymake)
 
 
 (provide 'daniel-elisp-package)

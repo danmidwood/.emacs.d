@@ -26,9 +26,7 @@
            (file-exists-p custom-file))
   (load custom-file nil :nomessage))
 
-(load (expand-file-name
-       "crafted-emacs/modules/crafted-init-config"
-       user-emacs-directory))
+(load "~/.emacs.d/crafted-emacs/modules/crafted-init-config")
 
 (require 'crafted-osx-config)
 
@@ -36,6 +34,7 @@
 (require 'daniel-development-package)
 (require 'daniel-elisp-package)
 (require 'daniel-clojure-package)
+(require 'daniel-java-package)
 
 (package-install-selected-packages :noconfirm)
 
@@ -43,6 +42,7 @@
 (require 'daniel-development-config)
 (require 'daniel-elisp-config)
 (require 'daniel-clojure-config)
+(require 'daniel-java-config)
 
 (provide 'init)
 ;;; init.el ends here

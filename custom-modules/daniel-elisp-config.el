@@ -21,12 +21,18 @@
 
 ;;; Code:
 
-
-(require 'eldoc)
 (require 'daniel-lisp-config)
+(require 'eldoc)
+(require 'flycheck)
+(require 'which-key)
 
-(add-hook 'emacs-lisp-mode-hook #'package-lint-flymake-setup)
+(add-hook 'emacs-lisp-mode-hook
+          (lambda ()
+            (setq-local flycheck-emacs-lisp-load-path 'inherit)
+            (flycheck-mode 1)))
 (add-hook 'emacs-lisp-mode-hook #'daniel-lisp-hook)
+
+(which-key-mode)
 
 (provide 'daniel-elisp-config)
 ;;; daniel-elisp-config.el ends here

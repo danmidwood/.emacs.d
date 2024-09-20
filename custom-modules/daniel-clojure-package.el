@@ -26,10 +26,10 @@
 (add-to-list 'package-selected-packages 'cider)
 (add-to-list 'package-selected-packages 'clj-refactor)
 (add-to-list 'package-selected-packages 'clojure-mode)
+(add-to-list 'package-selected-packages 'company)
 (add-to-list 'package-selected-packages 'flycheck-clojure)
-
-
-
+(add-to-list 'package-selected-packages 'lsp-mode)
+(add-to-list 'package-selected-packages 'lsp-ui)
 
 (provide 'daniel-clojure-package)
 ;;; daniel-clojure-package.el ends here

@@ -1,4 +1,4 @@
-;;; daniel-lisp-config.el --- Shared Lisp config  -*- lexical-binding: t; -*-
+;;; daniel-java-config.el --- Java Config            -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2024  Daniel Midwood
 
@@ -19,15 +19,14 @@
 
 ;;; Commentary:
 
+;;
+
 ;;; Code:
-(require 'paredit)
-(require 'rainbow-delimiters)
 
-(defun daniel-lisp-hook ()
-  "Enable parens modes for nicer editing."
-  (enable-paredit-mode)
-  (rainbow-delimiters-mode 1)
-  (show-paren-mode 1))
+(require 'lsp-java)
 
-(provide 'daniel-lisp-config)
-;;; daniel-lisp-config.el ends here
+(setenv "JAVA_HOME" "/Library/Java/JavaVirtualMachines/jdk-23.jdk/Contents/Home")
+(add-hook 'java-mode-hook #'lsp)
+
+(provide 'daniel-java-config)
+;;; daniel-java-config.el ends here
