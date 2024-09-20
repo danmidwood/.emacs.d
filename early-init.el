@@ -38,5 +38,8 @@
 ;; And line numbers down the side in each buffer.
 (global-display-line-numbers-mode)
 
+;; Store backups locally
+(setq backup-directory-alist `(("." . "~/.emacs.d/backups")))
+
 (provide 'early-init)
 ;;; early-init.el ends here
