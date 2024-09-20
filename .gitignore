@@ -10,3 +10,10 @@ tramp
 # elpa packages
 /elpa/
 /transient/
+/.cache/
+/workspace/
+/url/
+/projects
+/eclipse.jdt.ls/
+/.lsp-session-v1
+/.dap-breakpoints
