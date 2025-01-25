@@ -29,6 +29,8 @@
 ;; Disabled because work code is severly non-compliant
 ;; (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (setq whitespace-style (quote (face tabs trailing lines-tail tab-mark)))
+(setq whitespace-line-column 120) ;; Set the line column limit to 120
+
 (global-whitespace-mode 1)
 
 (provide 'daniel-development-config)

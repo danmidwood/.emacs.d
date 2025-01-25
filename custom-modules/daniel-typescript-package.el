@@ -1,8 +1,8 @@
-;;; daniel-theme-config.el --- Config to load a theme  -*- lexical-binding: t; -*-
+;;; daniel-typescript-package.el --- Install Typescript Packages  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2024  Daniel Midwood
 
-;; Author: Daniel Midwood
+;; Author: Daniel Midwood <danielmidwood@Daniels-MacBook-Pro.local>
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -21,9 +21,8 @@
 
 ;;; Code:
 
-(load-theme 'dracula t)
+(add-to-list 'package-selected-packages 'typescript-mode)
+(add-to-list 'package-selected-packages 'lsp-typescript)
 
-(set-face-attribute 'default nil :height 180)
-
-(provide 'daniel-theme-config)
-;;; daniel-theme-config.el ends here
+(provide 'daniel-typescript-package)
+;;; daniel-typescript-package.el ends here

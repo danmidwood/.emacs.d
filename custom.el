@@ -17,7 +17,7 @@
      ("stable" . 70)
      ("melpa" . 0)))
  '(package-selected-packages
-   '(which-key flycheck lsp-ui lsp-mode magit flycheck-clojure clojure-mode clj-refactor cider rainbow-delimiters paredit dracula-theme))
+   '(lua-mode yaml-mode json-mode which-key flycheck lsp-ui lsp-mode magit flycheck-clojure clojure-mode clj-refactor cider rainbow-delimiters paredit dracula-theme))
  '(safe-local-variable-values
    '((elisp-lint-indent-specs
       (if-let* . 2)

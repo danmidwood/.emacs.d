@@ -35,6 +35,7 @@
 (require 'daniel-elisp-package)
 (require 'daniel-clojure-package)
 (require 'daniel-java-package)
+(require 'daniel-typescript-package)
 
 (package-install-selected-packages :noconfirm)
 
@@ -43,6 +44,7 @@
 (require 'daniel-elisp-config)
 (require 'daniel-clojure-config)
 (require 'daniel-java-config)
+(require 'daniel-typescript-config)
 
 (provide 'init)
 ;;; init.el ends here
